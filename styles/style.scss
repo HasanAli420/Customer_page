@@ -1,0 +1,245 @@
+/*----------  colors  ----------*/
+
+$primary_c: rgb(255, 153, 0);
+$black_c: #000000;
+$opacity_c: rgb(0, 0, 0, 0.5);
+$white_c: #fff;
+$body-bg_c: #fff;
+$text_tit_c: #666666;
+
+/*=============================================
+=            fonts       =
+=============================================*/
+
+/*----------  fonts family  ----------*/
+$f_poppins: "Poppins", sans-serif;
+
+/*----------  font weights ----------*/
+$f_weights: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+);
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: $f_poppins;
+}
+
+
+/*=============================================
+*----------  customer ----------*
+=============================================*/
+
+
+.layOut{
+    background-color: $body-bg_c;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.customer{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    #{&}__heading {
+        font-size: 28px;
+        font-weight: map-get($f_weights , semibold );
+        color: $text_tit_c;
+        margin-bottom: 20px;
+    }
+
+    #{&}__flex {
+        display: flex;
+        gap: 45px;
+    }
+
+    #{&}__receiver {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+/*=============================================
+---------- Customer form  ----------
+=============================================*/
+
+
+.customer .customer__receiver .receiver--form {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 39px 0px rgba(0, 0, 0, 0.1019607843);
+    margin-bottom: 30px;
+
+    h3{
+        color: $text_tit_c;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        font-weight: map-get($f_weights , semibold );
+    }
+}
+
+.customer .customer__receiver .receiver--form .receiver-contact{
+    margin-bottom: 30px;
+}
+
+
+.customer .customer__receiver .receiver--form .receiver-contact input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #0000001F;
+    border-radius: 6px;
+    
+}
+
+.customer .customer__receiver .receiver--form .receiver-address input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #0000001F;
+    border-radius: 6px;
+    
+}
+
+.customer .customer__receiver .receiver--form .receiver-address .flex{
+    display: flex;
+    gap: 20px;
+
+}
+
+.customer .receiver--form .receiver-address .flex .flexLeft{
+   width: 100%;
+    
+}
+
+.customer .receiver--form .receiver-address .flex .flexRight{
+   margin-left: auto;
+    
+}
+
+/*=============================================
+---------- form button style  ----------
+=============================================*/
+
+
+
+.customer .customer__receiver .form--btn{
+    text-align: center;
+}
+
+.customer .customer__receiver .form--btn .clear-btn{
+    display: inline-block;
+    border: 1px solid $black_c;
+    padding: 8px 30px;
+    border-radius: 10px;
+    color: $black_c;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-weight: map-get($f_weights , semibold );
+    margin-bottom: 15px
+}
+
+.customer .customer__receiver .form--btn .add-btn{
+    @extend .clear-btn;
+    border: none;
+    border: 1px solid #FF9900;
+    background-color: #FF9900;
+    box-shadow: 0px 16px 20px 0px #0000000A;
+
+}
+
+
+
+
+
+/*=============================================
+---------- Customer card contact  ----------
+=============================================*/
+
+
+.customer .customer__contacts {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color:#000000D4;
+    ;
+
+    h2{
+        color: $white_c;
+        font-size: 21px;
+        font-weight: map-get($f_weights , semibold );
+        margin-bottom: 20px;
+    }
+}
+
+.customer .customer__contacts .contact--card{
+    background-color: #FFFFFF1F;
+    padding: 10px;
+    border-radius: 9px;
+
+    p{
+        color: $white_c;
+        font-size: 11px;
+        font-weight: map-get($f_weights , regular );
+        margin-bottom: 10px;
+    }
+}
+
+.customer .customer__contacts .contact--card .cardTop{
+    display: flex;
+}
+
+.customer .customer__contacts .contact--card .cardTop .office{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+
+
+    h3{
+        font-size: 13px;
+        color: $white_c;
+        font-weight: map-get($f_weights , semibold );
+    }
+}
+
+.customer .customer__contacts .contact--card .cardTop .office span{
+    font-size: 16px;
+}
+
+.customer .customer__contacts .contact--card .cardTop span{
+    margin-left: auto;
+    color: $white_c;
+    font-size: 11px;
+    font-weight: map-get($f_weights , regular );
+}
+
+
+
+
+/* Responsive design */
+
+@media (max-width: 768px){
+    .customer .customer__flex{
+        display: block;
+    }
+}
